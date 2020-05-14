@@ -43,7 +43,7 @@ import 'web-animations-js';
 // polyfill for @angular/animations
 // https://github.com/angular/angular/issues/24769
 if (!Element.prototype.matches) {
-    Element.prototype.matches = Element.prototype.msMatchesSelector;
+    Element.prototype.matches = (<any> Element).prototype.msMatchesSelector;
 }
 
 /** Evergreen browsers require these. **/
